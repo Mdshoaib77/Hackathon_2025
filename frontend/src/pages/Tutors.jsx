@@ -34,9 +34,9 @@ const Tutors = () => {
   return (
     <div className="max-padd-container py-28">
       {/* Title */}
-      <div className="max-w-xl mx-auto text-center pb-12">
+      <div className="max-w-xl pb-12 mx-auto text-center">
         <div className="h3">
-          <div className="inline-flex flexCenter gap-2 flex-wrap capitalize">
+          <div className="inline-flex flex-wrap gap-2 capitalize flexCenter">
           Get started with a skilled tutor
             <div className="flex items-center -space-x-3">
               <img
@@ -44,21 +44,21 @@ const Tutors = () => {
                 alt=""
                 width={44}
                 height={44}
-                className="rounded-full shadow-sm ring-1 ring-slate-900/5 object-cover aspect-square"
+                className="object-cover rounded-full shadow-sm ring-1 ring-slate-900/5 aspect-square"
               />
               <img
                 src={tutor2}
                 alt=""
                 width={44}
                 height={44}
-                className="rounded-full shadow-sm ring-1 ring-slate-900/5 object-cover aspect-square"
+                className="object-cover rounded-full shadow-sm ring-1 ring-slate-900/5 aspect-square"
               />
               <img
                 src={tutor3}
                 alt=""
                 width={44}
                 height={44}
-                className="rounded-full shadow-sm ring-1 ring-slate-900/5 object-cover aspect-square"
+                className="object-cover rounded-full shadow-sm ring-1 ring-slate-900/5 aspect-square"
               />
             </div>
           </div>
@@ -88,21 +88,21 @@ const Tutors = () => {
       </div>
 
       {/* Tutor Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-x-10 sm:gap-y-12">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 sm:gap-x-10 sm:gap-y-12">
         {filteredTutors?.map((tutor, i) => (
-          <div key={i} className="rounded-xl overflow-hidden relative group">
+          <div key={i} className="relative overflow-hidden rounded-xl group">
             <div>
               <img src={tutor.image} alt="" className="overflow-hidden" />
               <div className="absolute inset-0 bg-black/15"></div>
             </div>
-            <div className="p-3 absolute bottom-0 text-white group-hover:hidden">
+            <div className="absolute bottom-0 p-3 text-white group-hover:hidden">
               <span className="flex items-baseline gap-x-1 medium-14">
                 <FaStar className="text-yellow-200" /> 4.8
               </span>
               <h5 className="h5">{tutor.name}</h5>
               <p className="text-white/80">{tutor.subject}</p>
             </div>
-            <div className="absolute inset-0 flex items-end bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 z-10">
+            <div className="absolute inset-0 z-10 flex items-end transition duration-300 opacity-0 bg-black/40 group-hover:opacity-100">
               <div className="flex flex-col w-full gap-2 p-4">
                 <button
                   onClick={() => navigate(`/session/${tutor._id}`)}

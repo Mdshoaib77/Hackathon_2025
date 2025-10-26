@@ -5,6 +5,7 @@ import Features from '../components/Features'
 import Subjects from '../components/Subjects'
 import FeaturedTutors from '../components/FeaturedTutors'
 import About from '../components/About'
+import AboutUs from '../components/AboutUs'
 
 
 const Home = () => {
@@ -12,10 +13,11 @@ const Home = () => {
     <>
       <Hero />
       <Features />
+        <AboutUs/>
       <Subjects />
       <FeaturedTutors />
       <About />
-      {/* <div className='max-padd-container bg-gray-900'>
+      {/* <div className='bg-gray-900 max-padd-container'>
         <Footer />
       </div> */}
     </>

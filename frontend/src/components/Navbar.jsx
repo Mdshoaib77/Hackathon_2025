@@ -19,10 +19,10 @@ const Navbar = ({ containerStyles, toggleMenu, menuOpened }) => {
         <>
           <FaRegWindowClose
             onClick={toggleMenu}
-            className="text-xl self-end cursor-pointer relative left-8"
+            className="relative self-end text-xl cursor-pointer left-8"
           />
           {/* logo */}
-          <Link to={"/"} className="bold-24 flex pb-12">
+          <Link to={"/"} className="flex pb-12 bold-24">
             <span className="inline-flex">
               <span className="inline-flex items-center justify-center p-2 h-8 w-8 bg-secondary text-tertiary -rotate-[31deg] rounded-full">
                 P
