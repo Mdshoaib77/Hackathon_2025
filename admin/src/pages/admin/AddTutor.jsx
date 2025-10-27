@@ -81,10 +81,10 @@ const AddTutor = () => {
     <div className="px-2 sm:px-8 py-12 h-screen sm:pl-[23%]">
       <form
         onSubmit={onSubmitHandler}
-        className="flex flex-col lg:flex-row gap-4 lg:gap-12 medium-14"
+        className="flex flex-col gap-4 lg:flex-row lg:gap-12 medium-14"
       >
         {/* ============== LEFT SIDE ============= */}
-        <div className="flex gap-y-3 flex-col">
+        <div className="flex flex-col gap-y-3">
           <div className="w-full">
             <h5 className="h5">Tutor Name</h5>
             <input
@@ -127,7 +127,7 @@ const AddTutor = () => {
           </div>
           <div className="w-full">
             <h5 className="h5">Tutor Address</h5>
-            <div className="flex gap-2 w-full">
+            <div className="flex w-full gap-2">
               <input
                 onChange={(e) => setCity(e.target.value)}
                 value={city}
@@ -152,7 +152,7 @@ const AddTutor = () => {
           </button>
         </div>
         {/* ============== RIGHT SIDE ============= */}
-        <div className="flex gap-y-3 flex-col">
+        <div className="flex flex-col gap-y-3">
            {/* Qualification */}
            <div className="w-full">
             <h5 className="h5">Qualification</h5>
@@ -170,7 +170,7 @@ const AddTutor = () => {
             <select
               onChange={(e) => setSubject(e.target.value)}
               value={subject}
-              className="px-3 py-2 ring-1 ring-slate-900/10 rounded bg-tertiary/5 mt-1 sm:w-full text-gray-30"
+              className="px-3 py-2 mt-1 rounded ring-1 ring-slate-900/10 bg-tertiary/5 sm:w-full text-gray-30"
             >
               <option value="Science">Science</option>
               <option value="Commerce">Commerce</option>
@@ -186,7 +186,7 @@ const AddTutor = () => {
             <select
               onChange={(e) => setExperience(e.target.value)}
               value={experience}
-              className="px-3 py-2 ring-1 ring-slate-900/10 rounded bg-tertiary/5 mt-1 sm:w-full text-gray-30"
+              className="px-3 py-2 mt-1 rounded ring-1 ring-slate-900/10 bg-tertiary/5 sm:w-full text-gray-30"
             >
               <option value="1 Year">1 Year</option>
               <option value="2 Year">2 Year</option>
@@ -210,7 +210,7 @@ const AddTutor = () => {
               type="number"
               placeholder="Fees"
               min={0}
-              className="px-3 py-2 ring-1 ring-slate-900/10 rounded bg-tertiary/5 w-20"
+              className="w-20 px-3 py-2 rounded ring-1 ring-slate-900/10 bg-tertiary/5"
             />
           </div>
           {/* Image */}
@@ -220,7 +220,7 @@ const AddTutor = () => {
               <img
                 src={tutImg ? URL.createObjectURL(tutImg) : upload_icon}
                 alt=""
-                className="w-14 h-14 aspect-square object-cover ring-1 ring-slate-900/5 bg-light rounded-lg"
+                className="object-cover rounded-lg w-14 h-14 aspect-square ring-1 ring-slate-900/5 bg-light"
               />
               <input
                 onChange={handleImageChange}
